@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: careerwillappbot
+    env: python
+    plan: free
+    dockerfilePath: Dockerfile
+    port: 8000  # Ensure this matches the port Gunicorn is bound to

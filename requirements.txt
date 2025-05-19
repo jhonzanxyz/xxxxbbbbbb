@@ -1,0 +1,8 @@
+pyrogram
+requests
+asyncio
+Flask
+gunicorn
+tgcrypto
+pyromod
+supervisor==4.2.4 
