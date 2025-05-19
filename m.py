@@ -6,9 +6,9 @@ from pyromod import listen
 import threading
 
 # Telegram bot credentials
-BOT_TOKEN = "73062914:AAF5tTKQM-PAC_Ok3P0EX0RSdjBop-phR0k"
-API_ID = "15541919"
-API_HASH = "fbf0d590575bbaaad9d773d04c8872e4"
+BOT_TOKEN = "7842780078:AAG-8EEvMIq9iofWEkTgIc_HdCQn2fq5j14"
+API_ID = "29344139"
+API_HASH = "6972ba754ccab4894a193ac7b5150325"
 
 # Brightcove credentials
 ACCOUNT_ID = "6206459123001"
