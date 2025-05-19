@@ -13,7 +13,7 @@ API_HASH = "6972ba754ccab4894a193ac7b5150325"
 # Brightcove credentials
 ACCOUNT_ID = "6206459123001"
 BCOV_POLICY = "BCpkADawqM1474MvKwYlMRZNBPoqkJY-UWm7zE1U769d5r5kqTjG0v8L-THXuVZtdIQJpfMPB37L_VJQxTKeNeLO2Eac_yMywEgyV9GjFDQ2LTiT4FEiHhKAUvdbx9ku6fGnQKSMB8J5uIDd"
-bc_url = f"https://edge.api.brightcove.com/playback/v1/accounts/{ACCOUNT_ID}/videos/"
+bc_url = f"https://edge.api.brightcove.com/playback/v9/accounts/{ACCOUNT_ID}/videos/"
 bc_hdr = {"BCOV-POLICY": BCOV_POLICY}
 
 # Telegram bot client
