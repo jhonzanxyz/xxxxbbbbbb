@@ -13,7 +13,7 @@ API_HASH = "6972ba754ccab4894a193ac7b5150325"
 # Brightcove credentials
 ACCOUNT_ID = "6206459123001"
 BCOV_POLICY = "BCpkADawqM1474MvKwYlMRZNBPoqkJY-UWm7zE1U769d5r5kqTjG0v8L-THXuVZtdIQJpfMPB37L_VJQxTKeNeLO2Eac_yMywEgyV9GjFDQ2LTiT4FEiHhKAUvdbx9ku6fGnQKSMB8J5uIDd"
-bc_url = f"https://edge.api.brightcove.com/playback/v9/accounts/{ACCOUNT_ID}/videos/"
+bc_url = f"https://edge.api.brightcove.com/playback/v1/accounts/{ACCOUNT_ID}/videos/"
 bc_hdr = {"BCOV-POLICY": BCOV_POLICY}
 
 # Telegram bot client
@@ -69,7 +69,7 @@ async def careerdl(app, message, headers, raw_text2, raw_text3, prog, name, name
     safe_name = name.replace('/', ' ').strip()
 
     for id_text in num_id:
-        details_url = f"https://elearn.crwilladmin.com/api/v8/batch-detail/{raw_text2}?redirectBy=mybatch&topicId={id_text}&pToken=&chapterId=0"
+        details_url = f"https://elearn.crwilladmin.com/api/v9/batch-detail/{raw_text2}?redirectBy=mybatch&topicId={id_text}&pToken=&chapterId=0"
         try:
             response = requests.get(details_url, headers=headers)
             response.raise_for_status()
@@ -82,7 +82,7 @@ async def careerdl(app, message, headers, raw_text2, raw_text3, prog, name, name
                 vid_id = item['id']
                 lesson_name = item['lessonName']
                 lessonExt = item['lessonExt']
-                url = f"https://elearn.crwilladmin.com/api/v8/class-detail/{vid_id}"
+                url = f"https://elearn.crwilladmin.com/api/v9/class-detail/{vid_id}"
                 try:
                     lesson_response = requests.get(url, headers=headers)
                     lesson_response.raise_for_status()
@@ -126,7 +126,7 @@ async def career_will(app, message):
             await app.send_message(message.chat.id, "Timeout reached. No input received within 30 seconds. The bot will stop listening.")
             return  # Stop further listening
 
-        login_url = "https://elearn.crwilladmin.com/api/v7/login-other"
+        login_url = "https://elearn.crwilladmin.com/api/v9/login-other"
         raw_text = input1.text.strip()
         
         # Check for ID*Password format
